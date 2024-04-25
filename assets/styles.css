@@ -150,6 +150,12 @@ body {
   font-size: 22px;
   margin-bottom: 20px;
 }
+
+.spotify-playlists h3 {
+  color: #989898;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
 .spotify-playlists .list {
   display: flex;
   gap: 20px;
