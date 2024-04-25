@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+    <title>Ethan Yuen's Portfolio</title>
     <link rel="stylesheet" href="./assets/styles.css">
     <!-- Code for the Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <!-- Code below is not working, so we comment it out -->
-    <!-- <script src="https://kit.fontawesome.com/11d1977781.js" crossorigin="anonymous"></script> -->
 <html>
     <body>
         <div class="sidebar">
@@ -62,7 +60,7 @@
               </li>
 
               <li>
-                <a href="#">
+                <a href="#liked-songs">
                   <span class="fa fas fa-heart"></span>
                   <span>Liked Songs</span>
                 </a>
@@ -91,7 +89,9 @@
                   <a href="./assets/Ethan Yuen - Resume.pdf" download>Resume</a>
                 </li>
               </ul>
-              <button type="button">Contact Me</button>
+              <a href="#contact-me">
+                <button type="button">Contact Me</button>
+              </a>
             </div>
           </div>
     
@@ -124,8 +124,9 @@
             </div>
           </div>
     
-          <div class="spotify-playlists">
-            <h2>Mood</h2>
+          <div class="spotify-playlists" id="liked-songs">
+            <h2>Liked Songs</h2>
+            <h3>Here is a list of my reently liked songs!</h3>
             <div class="list">
               <div class="item">
                 <img src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db" />
@@ -135,8 +136,39 @@
                 <h4>Mood Booster</h4>
                 <p>Get happy with today's dose of feel-good...</p>
               </div>
+
+              <div class="item">
+                <img src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db" />
+                <div class="play">
+                  <span class="fa fa-play"></span>
+                </div>
+                <h4>Mood Booster</h4>
+                <p>WHAT THE HECK</p>
+              </div>
+
+              <div class="item">
+                <img src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db" />
+                <div class="play">
+                  <span class="fa fa-play"></span>
+                </div>
+                <h4>Mood Booster</h4>
+                <p>BYE BYE</p>
+              </div>
+
+              <div class="item">
+                <img src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db" />
+                <div class="play">
+                  <span class="fa fa-play"></span>
+                </div>
+                <h4>Mood Booster</h4>
+                <p>HI HI</p>
+              </div>
             </div>
             <hr>
+          </div>
+
+          <div class="spotify-playlists" id="contact-me">
+            <h2 style="text-align: center;">Contact Me</h2>
           </div>
         </div>
       </body>
