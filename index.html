@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="./assets/styles.css">
   <!-- Code for the Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-  <html>
+</head>
+<html>
 
 <body>
   <div class="sidebar">
@@ -29,14 +30,14 @@
         </li>
 
         <li>
-          <a href="#">
+          <a href="#about-me">
             <span class="fa fa-search"></span>
             <span>About Me</span>
           </a>
         </li>
 
         <li>
-          <a href="#">
+          <a href="#projects">
             <span class="fa fas fa-book"></span>
             <span>Projects</span>
           </a>
@@ -47,7 +48,7 @@
     <div class="navigation">
       <ul>
         <li>
-          <a href="#">
+          <a href="#experience">
             <span class="fa fas fa-plus-square"></span>
             <!-- <span class="fa-solid fa-briefcase fa-xl" aria-hidden="false"></span> -->
             <span>Experience</span>
@@ -97,8 +98,10 @@
       </div>
     </div>
 
-    <div class="spotify-playlists">
-      <h2>Spotify Playlists</h2>
+    <!-- About Me Section -->
+    <div class="spotify-playlists" id="about-me">
+      <h2>About Me</h2>
+      <h3>I am a graduating CS and Economics Double-Major from Grinnell College!</h3>
 
       <div class="list">
         <div class="item">
@@ -112,8 +115,9 @@
       </div>
     </div>
 
-    <div class="spotify-playlists">
-      <h2>Focus</h2>
+    <!-- Projects Section -->
+    <div class="spotify-playlists" id="projects">
+      <h2>Projects</h2>
       <div class="list">
         <div class="item">
           <img src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db" />
@@ -126,9 +130,31 @@
       </div>
     </div>
 
+    <!-- Experience Section-->
+    <div class="spotify-playlists" id="experience">
+      <h2>Experience</h2>
+      <div class="list">
+        <div class="item">
+          <img src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db" />
+          <div class="play">
+            <span class="fa fa-play"></span>
+          </div>
+          <h4>Peaceful Piano</h4>
+          <p>Relax and indulge with beautiful piano pieces</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="spotify-playlists" id="contact-me">
+      <h2>Contact Me</h2>
+      <hr>
+    </div>
+
+    <!-- Liked Songs Section -->
+    <!-- This isn't very intuitive, but going along with the theme of Spotify I thought this would be nifty -->
     <div class="spotify-playlists" id="liked-songs">
       <h2>Liked Songs</h2>
-      <h3>Here is a list of my reently liked songs!</h3>
+      <h3>Here is a list of my recently liked songs!</h3>
       <div class="list">
         <!-- Lass Es Kreisen -->
         <div class="item">
@@ -141,15 +167,21 @@
           <h4>Lass es kreisen</h4>
           <p>AnnenMayKantereit</p>
         </div>
+
+        <div class="item">
+          <img src="./assets/song images/dancinginthemoonlight.jpg" />
+          <div class="play">
+            <a href="https://open.spotify.com/track/3Fzlg5r1IjhLk2qRw667od" target=”_blank”>
+              <span class="fa fa-play"></span>
+            </a>
+          </div>
+          <h4>Dancing in the Moonlight</h4>
+          <p>King Harvest</p>
+        </div>
       </div>
     </div>
-    <hr>
   </div>
 
-  <div class="spotify-playlists" id="contact-me">
-    <h2 style="text-align: center;">Contact Me</h2>
-  </div>
-  </div>
 </body>
 
 </html>
