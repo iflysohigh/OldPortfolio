@@ -110,7 +110,7 @@ body {
 
 .topbar .navbar ul li {
   display: inline-block;
-  margin: 0px 8px;
+  margin: 0px 15px;
   width: 25px;
 }
 
@@ -274,26 +274,35 @@ body {
 }
 
 /* Hide the triple-line button when off */
-.toggle {
+.toggle-container {
   display: none;
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 9999; /* Ensure it's above other content */
+  cursor: pointer;
 }
 
 
 /* CSS for small screen */
 @media screen and (max-width: 768px) {
-  .toggle {
+  .toggle-container {
+    display: block;
+    
+  }
+  /* .toggle-container .toggle {
     display: block;
     position: fixed;
     top: 14px;
     right: 10px;
     cursor: pointer;
-  }
+  } */
 
-  .topbar {
+  /* .topbar {
     justify-content: left;
-  }
+  } */
 
-  .toggle .icon-bar {
+  .toggle-container .toggle .icon-bar {
     display: flex;
     width: 20px;
     height: 2px;
