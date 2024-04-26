@@ -295,7 +295,7 @@ body {
 
   .toggle .icon-bar {
     display: flex;
-    width: 2px;
+    width: 20px;
     height: 2px;
     background-color: #fff;
     margin: 3px 0;
@@ -326,6 +326,7 @@ body {
     width: 100vw;
     padding: 30px;
   }
+
   .sidebar .navigation ul li a .fa {
     margin-right: 0;
     /* Adjusting icon margin for small screens */
