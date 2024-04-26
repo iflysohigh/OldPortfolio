@@ -12,6 +12,12 @@
 <html>
 
 <body>
+  <button class="toggle">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
   <div class="sidebar">
     <div class="logo">
       <a href="#">
@@ -73,28 +79,29 @@
   </div>
 
   <div class="main-container">
+    <!-- Top-Bar -->
     <div class="topbar">
-      <div class="prev-next-buttons">
-        <button type="button" class="fa fas fa-chevron-left"></button>
-        <button type="button" class="fa fas fa-chevron-right"></button>
-      </div>
-
+      <!-- Navbar -->
       <div class="navbar">
         <ul>
           <li>
-            <a href="https://github.com/iflysohigh/" target=”_blank”>GitHub</a>
+            <a href="https://github.com/iflysohigh/" target=”_blank”>
+              <i class="fa-brands fa-github fa-2xl" style="color: #1ED760;"></i>
+            </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/ethan-yuen/" target=”_blank”>LinkedIn</a>
+            <a href="https://www.linkedin.com/in/ethan-yuen/" target=”_blank”>
+              <i class="fa-brands fa-linkedin fa-2xl" style="color: #1ED760;"></i>
+            </a>
           </li>
           <li class="divider">|</li>
           <li>
             <a href="./assets/Ethan Yuen - Resume.pdf" download>Resume</a>
           </li>
+          <a href="#contact-me">
+            <button type="button">Contact Me</button>
+          </a>
         </ul>
-        <a href="#contact-me">
-          <button type="button">Contact Me</button>
-        </a>
       </div>
     </div>
 
@@ -145,6 +152,7 @@
       </div>
     </div>
 
+    <!-- Contact Me Section -->
     <div class="spotify-playlists" id="contact-me">
       <h2>Contact Me</h2>
       <hr>
