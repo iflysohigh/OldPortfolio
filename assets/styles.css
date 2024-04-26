@@ -290,17 +290,6 @@ body {
     display: block;
     
   }
-  /* .toggle-container .toggle {
-    display: block;
-    position: fixed;
-    top: 14px;
-    right: 10px;
-    cursor: pointer;
-  } */
-
-  /* .topbar {
-    justify-content: left;
-  } */
 
   .toggle-container .toggle .icon-bar {
     display: flex;
@@ -308,11 +297,10 @@ body {
     height: 2px;
     background-color: #fff;
     margin: 3px 0;
-    transition: all 0.3s;
   }
   
   .topbar .navbar ul {
-    display:contents;
+    display: contents;
   }
 
   .main-container {
@@ -323,7 +311,7 @@ body {
   .sidebar {
     width: 0vw;
     overflow: hidden;
-    transition: width 0.3s;
+    transition: all 0.3s;
     position:absolute;
     background-color: #000000;
     padding: 0px;
