@@ -5,20 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ethan Yuen's Portfolio</title>
+  <!-- Importing CSS Styles via styles.css -->
   <link rel="stylesheet" href="./assets/styles.css">
   <!-- Code for the Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
 </head>
 <html>
 
 <body>
-  <button class="toggle">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
   <div class="sidebar">
+    <!-- Logo -->
     <div class="logo">
       <a href="#">
         <!-- Image for portfolio (see upper-right corner) -->
@@ -26,6 +24,7 @@
       </a>
     </div>
 
+    <!-- Navigation Part 1 (home [goes to the top], about me, projects) -->
     <div class="navigation">
       <ul>
         <li>
@@ -51,6 +50,7 @@
       </ul>
     </div>
 
+    <!-- Navigation Part 2 (experience, skills, liked songs) -->
     <div class="navigation">
       <ul>
         <li>
@@ -62,7 +62,7 @@
         </li>
 
         <li>
-          <a href="#">
+          <a href="#skills">
             <span class="fa fas fa-list"></span>
             <span>Skills</span>
           </a>
@@ -83,6 +83,15 @@
     <div class="topbar">
       <!-- Navbar -->
       <div class="navbar">
+
+        <!-- Sidebar when screen too small -->
+        <button class="toggle">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
         <ul>
           <li>
             <a href="https://github.com/iflysohigh/" target=”_blank”>
@@ -99,7 +108,7 @@
             <a href="./assets/Ethan Yuen - Resume.pdf" download>Resume</a>
           </li>
           <a href="#contact-me">
-            <button type="button">Contact Me</button>
+            <button type="button">Contact</button>
           </a>
         </ul>
       </div>
@@ -250,6 +259,18 @@
       </div>
     </div>
   </div>
+
+  <!-- Code for the Toggled Sidebar -->
+  <script>
+    document.querySelector('.toggle').addEventListener('click', function () {
+      var sidebar = document.querySelector('.sidebar');
+      if (sidebar.classList.contains('open')) {
+        sidebar.classList.remove('open'); // Close the sidebar
+      } else {
+        sidebar.classList.add('open'); // Open the sidebar
+      }
+    });
+  </script>
 
 </body>
 
