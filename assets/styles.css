@@ -141,7 +141,7 @@ body {
   color: #000000;
   font-size: 16px;
   font-weight: bold;
-  padding: 14px 30px;
+  padding: 8px 8px;
   border: 0px;
   border-radius: 40px;
   cursor: pointer;
@@ -301,7 +301,6 @@ body {
     margin: 3px 0;
     transition: all 0.3s;
   }
-  
   
   .topbar .navbar ul {
     display:contents;
