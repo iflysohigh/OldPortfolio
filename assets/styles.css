@@ -181,8 +181,8 @@ body {
   /* overflow-x: hidden; */
 }
 
-/* Disable animation for playlist items in experiences-list section */
 .experiences-list .list .item {
+  /* Disable animation for playlist items in experiences-list section */
   animation: none !important;
 }
 
@@ -205,6 +205,7 @@ body {
   transition: all ease 0.4s;
 
   display: inline-block;
+  /* Disabling this because it does not work */
   animation: 10s slide infinite linear;
 }
 
@@ -341,9 +342,8 @@ body {
   font-size: 1.2em; /* Increase font size */
 }
 
-/* Set height to 40% of viewport width */
 #contact-form textarea {
-  height: 20vw; 
+  height: 20vw; /* Set height to 40% of viewport width */
 }
 
 /* CSS for small screen */
