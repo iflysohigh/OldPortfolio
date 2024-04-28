@@ -162,107 +162,37 @@
       </div>
     </div>
 
-    <!-- Contact Me Section -->
-    <div class="spotify-playlists" id="contact-me">
-      <h2>Contact Me</h2>
-      <hr>
-    </div>
-
     <!-- Liked Songs Section -->
     <!-- This isn't very intuitive, but going along with the theme of Spotify I thought this would be nifty -->
     <div class="spotify-playlists" id="liked-songs">
       <h2>Liked Songs</h2>
       <h3>Here is a list of my favorite songs!</h3>
-      <div class="list">
-        <!-- Lass Es Kreisen -->
-        <a href="https://open.spotify.com/track/6Pn5YAIhhT85vxBD3YoIzG?si=f05cc90c3cba4c59" target=”_blank”>
-          <div class="item">
-            <img src="./assets/song images/lasseskreisen.jpg" />
-            <div class="play">
-              <span class="fa fa-play"></span>
-            </div>
-            <h4>Lass es kreisen</h4>
-            <p>AnnenMayKantereit</p>
-          </div>
-        </a>
-
-        <!-- Dancing in the Moonlight -->
-        <a href="https://open.spotify.com/track/3Fzlg5r1IjhLk2qRw667od" target=”_blank”>
-          <div class="item">
-            <img src="./assets/song images/dancinginthemoonlight.jpg" />
-            <div class="play">
-              <span class="fa fa-play"></span>
-            </div>
-            <h4>Dancing in the Moonlight</h4>
-            <p>King Harvest</p>
-          </div>
-        </a>
-
-        <!-- Lovers Rock -->
-        <a href="https://open.spotify.com/track/6dBUzqjtbnIa1TwYbyw5CM" target=”_blank”>
-          <div class="item">
-            <img src="./assets/song images/loversrock.png" />
-            <div class="play">
-              <span class="fa fa-play"></span>
-            </div>
-            <h4>Lovers Rock</h4>
-            <p>TV Girl</p>
-          </div>
-        </a>
-
-        <!-- The Spins -->
-        <a href="https://open.spotify.com/album/5AVFoUQapsVJ47KiGlCMff" target=”_blank”>
-          <div class="item">
-            <img src="./assets/song images/thespins.jpg" />
-            <div class="play">
-              <span class="fa fa-play"></span>
-            </div>
-            <h4>The Spins</h4>
-            <p>Mac Miller</p>
-          </div>
-        </a>
-
-        <!-- Viva La Vida -->
-        <a href="https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b" target=”_blank”>
-          <div class="item">
-            <img src="./assets/song images/vivalavida.jpg" />
-            <div class="play">
-              <span class="fa fa-play"></span>
-            </div>
-            <h4>Viva La Vida</h4>
-            <p>Coldplay</p>
-          </div>
-        </a>
-
-        <!-- Uh -->
-        <a href="https://open.spotify.com/track/4O2kPvcDfNAJbCA2Lc8l3D" target=”_blank”>
-          <div class="item">
-            <img src="./assets/song images/uh.jpg" />
-            <div class="play">
-              <span class="fa fa-play"></span>
-            </div>
-            <h4>Uh</h4>
-            <p>Zuarez</p>
-          </div>
-        </a>
-
-        <!-- Drop it like it's hot -->
-        <a href="https://open.spotify.com/track/2NBQmPrOEEjA8VbeWOQGxO?si=26f910e9c6064366" target=”_blank”>
-          <div class="item">
-            <img src="./assets/song images/dropitlikeitshot.jpg" />
-            <div class="play">
-              <span class="fa fa-play"></span>
-            </div>
-            <h4>Drop It Like It's Hot</h4>
-            <p>Snoop Dogg</p>
-          </div>
-        </a>
+      <div class="list" id="song-list">
+        <!-- Songs will be dynamically added here -->
       </div>
     </div>
+
+    <!-- Contact Me Section -->
+    <div class="spotify-playlists" id="contact-me">
+      <h2 style="color: #989898;">Contact Me</h2>
+      <form id="contact-form">
+        <label for="name">Name </label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <button type="submit" id="send-btn">Send</button>
+      </form>
+    </div>
+  </div>
   </div>
 
-  <!-- Code for the Toggled Sidebar -->
   <script>
+    // Function to open sidebar upon click (when screen is small enough)
     document.querySelector('.toggle').addEventListener('click', function () {
       var sidebar = document.querySelector('.sidebar');
       if (sidebar.classList.contains('open')) {
@@ -272,6 +202,7 @@
       }
     });
 
+    // Function to close sidebar upon clicking something within the sidebar (when screen is small enough)
     document.addEventListener('DOMContentLoaded', function () {
       var toggleButton = document.querySelector('.toggle');
       var sidebarLinks = document.querySelectorAll('.sidebar .navigation ul li a');
@@ -286,6 +217,104 @@
         });
       });
     });
+
+    // Contact form email
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Get form values
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      // Construct the email body
+      var emailBody = "Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message;
+
+      // Send email
+      window.location.href = "mailto:yuenethanw@gmail.com?subject=" + encodeURIComponent(name + " - Email via Portfolio") + "&body=" + encodeURIComponent(emailBody);
+
+      // Display message sent notification
+      var notification = document.createElement("p");
+      notification.textContent = "Message sent!";
+      notification.style.color = "#989898";
+      document.getElementById("contact-form").appendChild(notification);
+
+      // Optionally, you can remove the notification after a certain delay using setTimeout
+      setTimeout(function () {
+        notification.remove();
+      }, 3000); // Remove the notification after 3 seconds (3000 milliseconds)
+    });
+
+    // Array containing song data
+    const songs = [
+      {
+        title: "Lass es kreisen",
+        artist: "AnnenMayKantereit",
+        image: "./assets/song images/lasseskreisen.jpg",
+        link: "https://open.spotify.com/track/6Pn5YAIhhT85vxBD3YoIzG?si=f05cc90c3cba4c59"
+      },
+      {
+        title: "Dancing in the Moonlight",
+        artist: "King Harvest",
+        image: "./assets/song images/dancinginthemoonlight.jpg",
+        link: "https://open.spotify.com/track/3Fzlg5r1IjhLk2qRw667od"
+      },
+      {
+        title: "Lovers Rock",
+        artist: "TV Girl",
+        image: "./assets/song images/loversrock.png",
+        link: "https://open.spotify.com/track/6dBUzqjtbnIa1TwYbyw5CM"
+      },
+      {
+        title: "The Spins",
+        artist: "Mac Miller",
+        image: "./assets/song images/thespins.jpg",
+        link: "https://open.spotify.com/album/5AVFoUQapsVJ47KiGlCMff"
+      },
+      {
+        title: "Viva La Vida",
+        artist: "Coldplay",
+        image: "./assets/song images/vivalavida.jpg",
+        link: "https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b"
+      },
+      {
+        title: "Uh",
+        artist: "Zuarez",
+        image: "./assets/song images/uh.jpg",
+        link: "https://open.spotify.com/track/4O2kPvcDfNAJbCA2Lc8l3D"
+      }
+    ];
+
+
+    // Function to dynamically generate song HTML
+    function generateSongHTML(song) {
+      return `
+      <a href="${song.link}" target="_blank">
+        <div class="item">
+          <img src="${song.image}" />
+          <div class="play">
+            <span class="fa fa-play"></span>
+          </div>
+          <h4>${song.title}</h4>
+          <p>${song.artist}</p>
+        </div>
+      </a>
+    `;
+    }
+
+    function populateSongList(repeatCount) {
+      const songListElement = document.getElementById('song-list');
+      let songHTML = '';
+      for (let i = 0; i < repeatCount; i++) {
+        songs.forEach(song => {
+          songHTML += generateSongHTML(song);
+        });
+      }
+      songListElement.innerHTML = songHTML;
+    }
+
+    // Call function to populate song list
+    populateSongList(3);
   </script>
 
 </body>

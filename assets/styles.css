@@ -157,6 +157,7 @@ body {
 
 .spotify-playlists {
   padding: 20px 40px;
+  overflow-x: hidden;
 }
 
 .spotify-playlists h2 {
@@ -172,9 +173,21 @@ body {
 }
 
 .spotify-playlists .list {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
+  position: relative;
+  overflow:hidden;
+  display: inline-block;
+  width: 175vh;
+  white-space: nowrap;
+  /* overflow-x: hidden; */
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-615%);
+  }
 }
 
 .spotify-playlists .list .item {
@@ -185,11 +198,20 @@ body {
   border-radius: 6px;
   cursor: pointer;
   transition: all ease 0.4s;
+
+  display: inline-block;
+  /* Disabling this because it does not work */
+  animation: 10s slide infinite linear;
 }
 
-.spotify-playlists .list .item:hover {
+/* .spotify-playlists .list:hover .item {
+  animation-play-state: paused;
+} */
+
+.spotify-playlists .list .item:hover{
   background-color: #252525;
 }
+
 
 .spotify-playlists .list .item img {
   width: 100%;
@@ -278,13 +300,46 @@ body {
 .toggle-container {
   display: none;
   position: fixed;
-  bottom: 20px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
+  bottom: 20px;
+  right: 20px;
   z-index: 9999; /* Ensure it's above other content */
   cursor: pointer;
   
 }
 
+/* Contact-Me stuff */
+#contact-me {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+#contact-form {
+  color: #989898;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+#contact-form label,
+#contact-form input,
+#contact-form textarea {
+  display:inline;
+  margin: 0 auto;
+  width: 40vw;
+}
+
+#contact-form button {
+  display: inline;
+  margin: 0 auto;
+  width: 40%; /* Set width to 80% of viewport width */
+  max-width: 100px; /* Limiting maximum width to avoid stretching on larger screens */
+  height: 50px; /* Set height to 50 pixels */
+  font-size: 1.2em; /* Increase font size */
+}
+
+#contact-form textarea {
+  height: 20vw; /* Set height to 40% of viewport width */
+}
 
 /* CSS for small screen */
 @media screen and (max-width: 768px) {
@@ -298,6 +353,7 @@ body {
     height: 2px;
     background-color: #fff;
     margin: 7.5px 2.5px;
+
   }
   
   .topbar .navbar ul {
@@ -316,6 +372,7 @@ body {
     position:absolute;
     background-color: #000000;
     padding: 0px;
+    z-index: 100;
   }
 
   .sidebar.open {
