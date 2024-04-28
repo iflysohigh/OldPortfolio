@@ -181,10 +181,6 @@ body {
   /* overflow-x: hidden; */
 }
 
-/* .experiences-list .list .item {
-  animation: none !important;
-} */
-
 @keyframes slide {
   from {
     transform: translateX(0);
