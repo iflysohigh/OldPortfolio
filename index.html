@@ -246,7 +246,7 @@
     });
 
     // Array containing song data
-    const songs = [
+    const list_of_songs = [
       {
         title: "Lass es kreisen",
         artist: "AnnenMayKantereit",
@@ -302,11 +302,11 @@
     `;
     }
 
-    function populateSongList(repeatCount) {
-      const songListElement = document.getElementById('song-list');
+    function populateSongList(playlist_id, variable_list, repeatCount) {
+      const songListElement = document.getElementById(playlist_id);
       let songHTML = '';
       for (let i = 0; i < repeatCount; i++) {
-        songs.forEach(song => {
+        variable_list.forEach(song => {
           songHTML += generateSongHTML(song);
         });
       }
@@ -314,7 +314,7 @@
     }
 
     // Call function to populate song list
-    populateSongList(3);
+    populateSongList('song-list', list_of_songs, 3);
   </script>
 
 </body>
