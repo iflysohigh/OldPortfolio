@@ -135,7 +135,7 @@
     </div>
 
     <!-- Experience Section-->
-    <div class="spotify-playlists" id="experience">
+    <div class="spotify-playlists experiences-list" id="experience">
       <h2>Experience</h2>
       <div class="list" id="experience-list">
         <!-- Experiences will be dynamically added here -->
@@ -224,7 +224,54 @@
       }, 3000); // Remove the notification after 3 seconds (3000 milliseconds)
     });
 
-    // Array containing song data
+    const list_of_experiences = [
+      {
+        title: "IT Analyst (Data Ops)",
+        artist: "Sumitomo Mitsui Banking Corp",
+        image: "./assets/experience images/smbc.jpg",
+        link: ""
+      },
+      {
+        title: "IT Intern (Data Ops)",
+        artist: "Sumitomo Mitsui Banking Corp",
+        image: "./assets/experience images/smbc.jpg",
+        link: ""
+      },
+      {
+        title: "Blockchain Market Intern",
+        artist: "Lunar LLC",
+        image: "./assets/experience images/lunar.jpg",
+        link: ""
+      },
+      {
+        title: "CS/Econ Grader",
+        artist: "Grinnell College",
+        image: "./assets/experience images/grinnellcollege.png",
+        link: ""
+      }
+    ]
+
+    const list_of_projects = [
+      {
+        title: "Black Scholes Model",
+        artist: "Python, Flask, HTML, CSS",
+        image: "./assets/project images/blackscholes.png",
+        link: "https://iflysohigh.github.io/BlackScholes/"
+      },
+      {
+        title: "NY Housing Data Vis",
+        artist: "R (Shiny)",
+        image: "./assets/project images/nyhousingdata.png",
+        link: "https://iflysohigh.shinyapps.io/projectyuen/"
+      },
+      {
+        title: "Pomodoro Timer",
+        artist: "HTML, CSS",
+        image: "./assets/project images/pomodorotimer.png",
+        link: "https://iflysohigh.github.io/PomodoroTimer/"
+      }
+    ];
+
     const list_of_songs = [
       {
         title: "Lass es kreisen",
@@ -264,21 +311,6 @@
       }
     ];
 
-    const list_of_projects = [
-      {
-        title: "Black Scholes Model",
-        artist: "Python, Flask, HTML",
-        image: "./assets/project images/blackscholes.png",
-        link: "https://iflysohigh.github.io/BlackScholes/"
-      },
-      {
-        title: "Pomodoro Timer",
-        artist: "HTML",
-        image: "./assets/project images/pomodorotimer.png",
-        link: "https://iflysohigh.github.io/PomodoroTimer/"
-      }
-    ];
-
 
     // Function to dynamically generate song HTML
     function generateSongHTML(song) {
@@ -308,7 +340,10 @@
     }
 
     // Call function to populate project list
-    populateSongList('project-list', list_of_projects, 10);
+    populateSongList('project-list', list_of_projects, 6);
+
+    // Call function to populate experience list
+    populateSongList('experience-list', list_of_experiences, 1);
 
     // Call function to populate song list
     populateSongList('song-list', list_of_songs, 3);

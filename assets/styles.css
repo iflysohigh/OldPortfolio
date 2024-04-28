@@ -181,6 +181,11 @@ body {
   /* overflow-x: hidden; */
 }
 
+/* Disable animation for playlist items in experiences-list section */
+.experiences-list .list .item {
+  animation: none !important;
+}
+
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -200,13 +205,12 @@ body {
   transition: all ease 0.4s;
 
   display: inline-block;
-  /* Disabling this because it does not work */
   animation: 10s slide infinite linear;
 }
 
-/* .spotify-playlists .list:hover .item {
+.spotify-playlists .list:hover .item {
   animation-play-state: paused;
-} */
+}
 
 .spotify-playlists .list .item:hover{
   background-color: #252525;
@@ -244,7 +248,6 @@ body {
   font-size: 14px;
   margin-bottom: 10px;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
 }
 
@@ -253,6 +256,7 @@ body {
   font-size: 12px;
   line-height: 20px;
   font-weight: 600;
+  text-overflow: ellipsis;
 }
 
 .spotify-playlists hr {
@@ -337,8 +341,9 @@ body {
   font-size: 1.2em; /* Increase font size */
 }
 
+/* Set height to 40% of viewport width */
 #contact-form textarea {
-  height: 20vw; /* Set height to 40% of viewport width */
+  height: 20vw; 
 }
 
 /* CSS for small screen */
@@ -362,7 +367,6 @@ body {
 
   .main-container {
     margin-left: 0;
-    /* Adjusting margin for small screens */
   }
 
   .sidebar {
@@ -384,7 +388,6 @@ body {
 
   .sidebar .navigation ul li a .fa {
     margin-right: 0;
-    /* Adjusting icon margin for small screens */
   }
 
   .spotify-playlists {
