@@ -181,10 +181,9 @@ body {
   /* overflow-x: hidden; */
 }
 
-.experiences-list .list .item {
-  /* Disable animation for playlist items in experiences-list section */
+/* .experiences-list .list .item {
   animation: none !important;
-}
+} */
 
 @keyframes slide {
   from {
