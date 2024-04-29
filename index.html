@@ -226,8 +226,8 @@
 
     const list_of_about_me = [
       {
-        title: "",
-        artist: "",
+        title: "Education",
+        artist: "I attended Grinnell College and Graduated!",
         image: "",
         link: ""
       },
@@ -254,13 +254,13 @@
     const list_of_experiences = [
       {
         title: "IT Analyst (Data Ops)",
-        artist: "Sumitomo Mitsui Banking Corp",
+        artist: "Sumitomo Mitsui Banking Corporation",
         image: "./assets/experience images/smbc.jpg",
         link: ""
       },
       {
         title: "IT Intern (Data Ops)",
-        artist: "Sumitomo Mitsui Banking Corp",
+        artist: "Sumitomo Mitsui Banking Corporation",
         image: "./assets/experience images/smbc.jpg",
         link: ""
       },
@@ -370,7 +370,7 @@
       let songHTML = '';
       for (let i = 0; i < repeatCount; i++) {
         variable_list.forEach(song => {
-          if (playlist_id === 'experience-list') {
+          if (playlist_id === 'experience-list' || playlist_id === 'about-me-list') {
             songHTML += generateExperienceHTML(song);
           } else {
             songHTML += generateSongHTML(song);

@@ -185,7 +185,7 @@ body {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-615%);
+    transform: translateX(-654%);
   }
 }
 
@@ -251,7 +251,8 @@ body {
   font-size: 12px;
   line-height: 20px;
   font-weight: 600;
-  text-overflow: ellipsis;
+  /* text-overflow: ellipsis; */
+  white-space: normal;
 }
 
 /* CSS for projects and experiences sections */
