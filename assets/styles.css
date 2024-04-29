@@ -178,7 +178,6 @@ body {
   display: inline-block;
   width: 175vh;
   white-space: nowrap;
-  /* overflow-x: hidden; */
 }
 
 @keyframes slide {
@@ -253,6 +252,17 @@ body {
   line-height: 20px;
   font-weight: 600;
   text-overflow: ellipsis;
+}
+
+/* CSS for projects and experiences sections */
+#projects .list,
+#experience .list {
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+#projects .list .item,
+#experience .list .item {
+  animation: none !important; /* Disable animation */
 }
 
 .spotify-playlists hr {

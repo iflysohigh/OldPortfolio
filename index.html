@@ -224,6 +224,33 @@
       }, 3000); // Remove the notification after 3 seconds (3000 milliseconds)
     });
 
+    const list_of_about_me = [
+      {
+        title: "",
+        artist: "",
+        image: "",
+        link: ""
+      },
+      {
+        title: "",
+        artist: "",
+        image: "",
+        link: ""
+      },
+      {
+        title: "",
+        artist: "",
+        image: "",
+        link: ""
+      },
+      {
+        title: "",
+        artist: "",
+        image: "",
+        link: ""
+      }
+    ];
+
     const list_of_experiences = [
       {
         title: "IT Analyst (Data Ops)",
@@ -249,7 +276,7 @@
         image: "./assets/experience images/grinnellcollege.png",
         link: ""
       }
-    ]
+    ];
 
     const list_of_projects = [
       {
@@ -339,11 +366,14 @@
       songListElement.innerHTML = songHTML;
     }
 
+    // Call function to populate about-me list
+    populateSongList('about-me-list', list_of_about_me, 3);
+
     // Call function to populate project list
-    populateSongList('project-list', list_of_projects, 6);
+    populateSongList('project-list', list_of_projects, 1);
 
     // Call function to populate experience list
-    populateSongList('experience-list', list_of_experiences, 5);
+    populateSongList('experience-list', list_of_experiences, 1);
 
     // Call function to populate song list
     populateSongList('song-list', list_of_songs, 3);
