@@ -108,8 +108,8 @@
           <li>
             <a href="./assets/Ethan Yuen - Resume.pdf" download>Resume</a>
           </li>
-          <a href="#contact-me">
-            <button type="button">Contact</button>
+          <a href="mailto:yuenethanw@gmail.com" target="_blank">
+            <button type="button">Contact Me</button>
           </a>
         </ul>
       </div>
@@ -153,7 +153,7 @@
     </div>
 
     <!-- Contact Me Section -->
-    <div class="spotify-playlists" id="contact-me">
+    <!-- <div class="spotify-playlists" id="contact-me">
       <h2 style="color: #989898;">Contact Me</h2>
       <form id="contact-form">
         <label for="name">Name </label>
@@ -167,7 +167,7 @@
 
         <button type="submit" id="send-btn">Send</button>
       </form>
-    </div>
+    </div> -->
   </div>
 
   <script>
@@ -198,31 +198,31 @@
     });
 
     // Contact form email
-    document.getElementById("contact-form").addEventListener("submit", function (event) {
-      event.preventDefault(); // Prevent the default form submission
+    // document.getElementById("contact-form").addEventListener("submit", function (event) {
+    //   event.preventDefault(); // Prevent the default form submission
 
-      // Get form values
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email").value;
-      var message = document.getElementById("message").value;
+    //   // Get form values
+    //   var name = document.getElementById("name").value;
+    //   var email = document.getElementById("email").value;
+    //   var message = document.getElementById("message").value;
 
-      // Construct the email body
-      var emailBody = "Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message;
+    //   // Construct the email body
+    //   var emailBody = "Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message;
 
-      // Send email
-      window.location.href = "mailto:yuenethanw@gmail.com?subject=" + encodeURIComponent(name + " - Email via Portfolio") + "&body=" + encodeURIComponent(emailBody);
+    //   // Send email
+    //   window.location.href = "mailto:yuenethanw@gmail.com?subject=" + encodeURIComponent(name + " - Email via Portfolio") + "&body=" + encodeURIComponent(emailBody);
 
-      // Display message sent notification
-      var notification = document.createElement("p");
-      notification.textContent = "Message sent!";
-      notification.style.color = "#989898";
-      document.getElementById("contact-form").appendChild(notification);
+    //   // Display message sent notification
+    //   var notification = document.createElement("p");
+    //   notification.textContent = "Message sent!";
+    //   notification.style.color = "#989898";
+    //   document.getElementById("contact-form").appendChild(notification);
 
-      // Optionally, you can remove the notification after a certain delay using setTimeout
-      setTimeout(function () {
-        notification.remove();
-      }, 3000); // Remove the notification after 3 seconds (3000 milliseconds)
-    });
+    //   // Optionally, you can remove the notification after a certain delay using setTimeout
+    //   setTimeout(function () {
+    //     notification.remove();
+    //   }, 3000); // Remove the notification after 3 seconds (3000 milliseconds)
+    // });
 
     const list_of_about_me = [
       {
