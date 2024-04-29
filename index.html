@@ -352,7 +352,17 @@
           <p>${song.artist}</p>
         </div>
       </a>
-    `;
+      s`;
+    }
+
+    function generateExperienceHTML(experience) {
+      return `
+      <div class="item">
+        <img src="${experience.image}" />
+        <h4>${experience.title}</h4>
+        <p>${experience.artist}</p>
+      </div>
+      `;
     }
 
     function populateSongList(playlist_id, variable_list, repeatCount) {
@@ -360,7 +370,11 @@
       let songHTML = '';
       for (let i = 0; i < repeatCount; i++) {
         variable_list.forEach(song => {
-          songHTML += generateSongHTML(song);
+          if (playlist_id === 'experience-list') {
+            songHTML += generateExperienceHTML(song);
+          } else {
+            songHTML += generateSongHTML(song);
+          }
         });
       }
       songListElement.innerHTML = songHTML;
