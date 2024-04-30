@@ -174,7 +174,7 @@ body {
 
 .spotify-playlists .list {
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
   display: inline-block;
   width: 175vh;
   white-space: nowrap;
@@ -184,6 +184,7 @@ body {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-654%);
   }
@@ -207,7 +208,7 @@ body {
   animation-play-state: paused;
 }
 
-.spotify-playlists .list .item:hover{
+.spotify-playlists .list .item:hover {
   background-color: #252525;
 }
 
@@ -258,12 +259,14 @@ body {
 /* CSS for projects and experiences sections */
 #projects .list,
 #experience .list {
-  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-x: auto;
+  /* Enable horizontal scrolling */
 }
 
 #projects .list .item,
 #experience .list .item {
-  animation: none !important; /* Disable animation */
+  animation: none !important;
+  /* Disable animation */
 }
 
 .spotify-playlists hr {
@@ -313,9 +316,10 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 9999; /* Ensure it's above other content */
+  z-index: 9999;
+  /* Ensure it's above other content */
   cursor: pointer;
-  
+
 }
 
 /* Contact-Me stuff */
@@ -334,7 +338,7 @@ body {
 #contact-form label,
 #contact-form input,
 #contact-form textarea {
-  display:inline;
+  display: inline;
   margin: 0 auto;
   width: 40vw;
 }
@@ -342,18 +346,35 @@ body {
 #contact-form button {
   display: inline;
   margin: 0 auto;
-  width: 40%; /* Set width to 80% of viewport width */
-  max-width: 100px; /* Limiting maximum width to avoid stretching on larger screens */
-  height: 50px; /* Set height to 50 pixels */
-  font-size: 1.2em; /* Increase font size */
+  width: 40%;
+  /* Set width to 80% of viewport width */
+  max-width: 100px;
+  /* Limiting maximum width to avoid stretching on larger screens */
+  height: 50px;
+  /* Set height to 50 pixels */
+  font-size: 1.2em;
+  /* Increase font size */
 }
 
 #contact-form textarea {
-  height: 20vw; /* Set height to 40% of viewport width */
+  height: 20vw;
+  /* Set height to 40% of viewport width */
 }
 
 /* CSS for small screen */
 @media screen and (max-width: 768px) {
+
+  #projects .list,
+  #experience .list {
+    overflow-x: scroll; /* Enable horizontal scrolling */
+  }
+
+  #projects .spotify-playlists,
+  #experience .spotify-playlists {
+    padding: 20px 40px;
+    overflow-x: scroll;
+  }
+
   .toggle-container {
     display: block;
   }
@@ -366,7 +387,7 @@ body {
     margin: 7.5px 2.5px;
 
   }
-  
+
   .topbar .navbar ul {
     display: contents;
   }
@@ -379,7 +400,7 @@ body {
     width: 0vw;
     overflow: hidden;
     transition: all 0.3s;
-    position:absolute;
+    position: absolute;
     background-color: #000000;
     padding: 0px;
     z-index: 100;
