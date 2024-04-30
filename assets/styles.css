@@ -362,17 +362,17 @@ body {
 }
 
 /* CSS for small screen */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
 
   #projects .list,
   #experience .list {
-    overflow-x: scroll; /* Enable horizontal scrolling */
+    overflow-x: auto;
   }
 
-  #projects .spotify-playlists,
-  #experience .spotify-playlists {
-    padding: 20px 40px;
-    overflow-x: scroll;
+  #projects .list .item,
+  #experience .list .item {
+    /* Reset any animation */
+    animation: none !important;
   }
 
   .toggle-container {
@@ -419,5 +419,10 @@ body {
 
   .spotify-playlists {
     padding: 20px;
+  }
+
+  /* Allow it to keep scrolling upon hover on small screen*/
+  .spotify-playlists .list:hover .item {
+    animation-play-state: running;
   }
 }
