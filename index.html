@@ -19,7 +19,7 @@
     <!-- Logo -->
     <div class="logo">
       <a href="#">
-        <!-- Image for portfolio (see upper-right corner) -->
+        <!-- Image for portfolio (in the upper-right corner) -->
         <img src="./assets/portfolio-logo.png" height=auto width=500 alt="Logo" />
       </a>
     </div>
@@ -77,8 +77,9 @@
     </div>
   </div>
 
+  <!-- Main Container -->
   <div class="main-container">
-    <!-- Top-Bar -->
+    <!-- Top Bar -->
     <div class="topbar">
       <!-- Navbar -->
       <div class="navbar">
@@ -93,6 +94,7 @@
           </button>
         </div>
 
+        <!-- Sidebar -->
         <ul>
           <li>
             <a href="https://github.com/iflysohigh/" target=”_blank”>
@@ -151,23 +153,6 @@
         <!-- Songs will be dynamically added here -->
       </div>
     </div>
-
-    <!-- Contact Me Section -->
-    <!-- <div class="spotify-playlists" id="contact-me">
-      <h2 style="color: #989898;">Contact Me</h2>
-      <form id="contact-form">
-        <label for="name">Name </label>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-
-        <button type="submit" id="send-btn">Send</button>
-      </form>
-    </div> -->
   </div>
 
   <script>
@@ -197,37 +182,10 @@
       });
     });
 
-    // Contact form email
-    // document.getElementById("contact-form").addEventListener("submit", function (event) {
-    //   event.preventDefault(); // Prevent the default form submission
-
-    //   // Get form values
-    //   var name = document.getElementById("name").value;
-    //   var email = document.getElementById("email").value;
-    //   var message = document.getElementById("message").value;
-
-    //   // Construct the email body
-    //   var emailBody = "Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message;
-
-    //   // Send email
-    //   window.location.href = "mailto:yuenethanw@gmail.com?subject=" + encodeURIComponent(name + " - Email via Portfolio") + "&body=" + encodeURIComponent(emailBody);
-
-    //   // Display message sent notification
-    //   var notification = document.createElement("p");
-    //   notification.textContent = "Message sent!";
-    //   notification.style.color = "#989898";
-    //   document.getElementById("contact-form").appendChild(notification);
-
-    //   // Optionally, you can remove the notification after a certain delay using setTimeout
-    //   setTimeout(function () {
-    //     notification.remove();
-    //   }, 3000); // Remove the notification after 3 seconds (3000 milliseconds)
-    // });
-
     const list_of_about_me = [
       {
         title: "Education",
-        artist: "I attended Grinnell College and Graduated!",
+        artist: "I am en route to graduate Grinnell College by May 2024!",
         image: "",
         link: ""
       },
@@ -254,13 +212,13 @@
     const list_of_experiences = [
       {
         title: "IT Analyst (Data Ops)",
-        artist: "Sumitomo Mitsui Banking Corporation",
+        artist: "Sumitomo Mitsui Banking",
         image: "./assets/experience images/smbc.jpg",
         link: ""
       },
       {
         title: "IT Intern (Data Ops)",
-        artist: "Sumitomo Mitsui Banking Corporation",
+        artist: "Sumitomo Mitsui Banking",
         image: "./assets/experience images/smbc.jpg",
         link: ""
       },
@@ -355,7 +313,8 @@
       s`;
     }
 
-    function generateExperienceHTML(experience) {
+    // Generates HTMLs without hyperlinks
+    function generateHTMLNoHyperlink(experience) {
       return `
       <div class="item">
         <img src="${experience.image}" />
@@ -365,13 +324,14 @@
       `;
     }
 
+    // PopulateSongList will populate each playlist list with 'songs'
     function populateSongList(playlist_id, variable_list, repeatCount) {
       const songListElement = document.getElementById(playlist_id);
       let songHTML = '';
       for (let i = 0; i < repeatCount; i++) {
         variable_list.forEach(song => {
           if (playlist_id === 'experience-list' || playlist_id === 'about-me-list') {
-            songHTML += generateExperienceHTML(song);
+            songHTML += generateHTMLNoHyperlink(song);
           } else {
             songHTML += generateSongHTML(song);
           }
@@ -380,13 +340,13 @@
       songListElement.innerHTML = songHTML;
     }
 
-    // Call function to populate about-me list
+    // Call function to populate about-me list, no hyperlinks
     populateSongList('about-me-list', list_of_about_me, 3);
 
     // Call function to populate project list
     populateSongList('project-list', list_of_projects, 1);
 
-    // Call function to populate experience list
+    // Call function to populate experience list, no hyperlinks
     populateSongList('experience-list', list_of_experiences, 1);
 
     // Call function to populate song list

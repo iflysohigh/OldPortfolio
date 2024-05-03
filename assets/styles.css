@@ -191,6 +191,7 @@ body {
 }
 
 .spotify-playlists .list .item {
+  display: inline-block;
   min-width: 140px;
   width: 160px;
   padding: 15px;
@@ -199,8 +200,6 @@ body {
   cursor: pointer;
   transition: all ease 0.4s;
 
-  display: inline-block;
-  /* Disabling this because it does not work */
   animation: 10s slide infinite linear;
 }
 
@@ -212,9 +211,10 @@ body {
   background-color: #252525;
 }
 
-
 .spotify-playlists .list .item img {
-  width: 100%;
+  width: 150px;
+  height: 150px;
+  object-fit: fill;
   border-radius: 6px;
   margin-bottom: 10px;
 }
@@ -257,10 +257,19 @@ body {
 }
 
 /* CSS for projects and experiences sections */
-#projects .list,
-#experience .list {
-  overflow-x: auto;
+#projects .spotify-playlists .list .item,
+#experience .spotify-playlists .list .item{
   /* Enable horizontal scrolling */
+  display: inline-block;
+  min-width: 140px;
+  width: 160px;
+  padding: 15px;
+  background-color: #181818;
+  border-radius: 6px;
+  cursor: pointer;
+
+  overflow: hidden;
+  overflow-x: scroll;
 }
 
 #projects .list .item,
@@ -283,14 +292,6 @@ body {
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
-}
-
-.preview h6 {
-  color: #ffffff;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 12px;
-  margin-bottom: 10px;
 }
 
 .preview p {
@@ -329,52 +330,8 @@ body {
   font-weight: bold;
 }
 
-#contact-form {
-  color: #989898;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-}
-
-#contact-form label,
-#contact-form input,
-#contact-form textarea {
-  display: inline;
-  margin: 0 auto;
-  width: 40vw;
-}
-
-#contact-form button {
-  display: inline;
-  margin: 0 auto;
-  width: 40%;
-  /* Set width to 80% of viewport width */
-  max-width: 100px;
-  /* Limiting maximum width to avoid stretching on larger screens */
-  height: 50px;
-  /* Set height to 50 pixels */
-  font-size: 1.2em;
-  /* Increase font size */
-}
-
-#contact-form textarea {
-  height: 20vw;
-  /* Set height to 40% of viewport width */
-}
-
 /* CSS for small screen */
 @media screen and (max-width: 800px) {
-
-  #projects .list,
-  #experience .list {
-    overflow-x: auto;
-  }
-
-  #projects .list .item,
-  #experience .list .item {
-    /* Reset any animation */
-    animation: none !important;
-  }
-
   .toggle-container {
     display: block;
   }
@@ -424,5 +381,17 @@ body {
   /* Allow it to keep scrolling upon hover on small screen*/
   .spotify-playlists .list:hover .item {
     animation-play-state: running;
+  }
+
+  #projects .list .item,
+  #experience .list .item {
+    /* Disable animation */
+    animation: none !important;
+  }
+
+  #projects .list,
+  #experience .list{
+    cursor: pointer;
+    overflow-x: scroll;
   }
 }
