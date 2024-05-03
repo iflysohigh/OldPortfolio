@@ -239,6 +239,7 @@ body {
   transform: translateY(-20px);
 }
 
+/* Song headers */
 .spotify-playlists .list .item h4 {
   color: #ffffff;
   font-size: 14px;
@@ -247,6 +248,7 @@ body {
   text-overflow: ellipsis;
 }
 
+/* Song descriptions */
 .spotify-playlists .list .item p {
   color: #989898;
   font-size: 12px;
@@ -267,8 +269,7 @@ body {
   background-color: #181818;
   border-radius: 6px;
   cursor: pointer;
-
-  overflow: hidden;
+  
   overflow-x: scroll;
 }
 
