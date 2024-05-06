@@ -260,7 +260,8 @@ body {
 
 /* CSS for projects and experiences sections */
 #projects .spotify-playlists .list,
-#experience .spotify-playlists .list {
+#experience .spotify-playlists .list,
+#skills .spotify-playlists .list {
   /* Enable horizontal scrolling */
   display: inline-block;
   min-width: 140px;
@@ -274,7 +275,8 @@ body {
 }
 
 #projects .list .item,
-#experience .list .item {
+#experience .list .item,
+#skills .list .item {
   animation: none !important;
   /* Disable animation */
 }

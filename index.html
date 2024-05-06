@@ -144,6 +144,14 @@
       </div>
     </div>
 
+    <!-- Skills Section -->
+    <div class="spotify-playlists" id="skills">
+      <h2>Skills</h2>
+      <div class="list" id="skill-list">
+        <!-- Songs will be dynamically added here -->
+      </div>
+    </div>
+
     <!-- Liked Songs Section -->
     <!-- This isn't very intuitive, but going along with the theme of Spotify I thought this would be nifty -->
     <div class="spotify-playlists" id="liked-songs">
@@ -265,17 +273,44 @@
         title: "StockIndicators (yfinance)",
         artist: "Python",
         image: "./assets/project images/stockindicators.png",
-        link: "https://github.com/iflysohigh/StockIndicators"
+        link: "https://github.com/iflysohigh/StockIndicators/"
+      }
+    ];
+
+    const list_of_skills = [
+      {
+        title: "Programming",
+        artist: "Proficient in Python, Java, C++, R Shiny, and HTML. See my GitHub!",
+        image: "./assets/skill images/github.png",
+        link: "https://github.com/iflysohigh/"
+      },
+      {
+        title: "Research Papers",
+        artist: "I've written several Event Study and Difference-in-Difference analysis papers",
+        image: "./assets/skill images/researchpaper.png",
+        link: "https://drive.google.com/drive/u/1/folders/1_Eo7KENYJ1-jAlWAGBWwqLbQb3v9q4D8/"
+      },
+      {
+        title: "Time Management",
+        artist: "Juggling double-major, athletics, and several leadership positions",
+        image: "./assets/skill images/timemanagement.jpg",
+        link: "https://www.linkedin.com/in/ethan-yuen/"
+      },
+      {
+        title: "Stock Analysis",
+        artist: "Coded stock technical indicators, and generated profits upwards of 1000%",
+        image: "./assets/skill images/stock.png",
+        link: "https://github.com/iflysohigh/BlackScholes/tree/main/readme/"
+      },
+      {
+        title: "Teamwork",
+        artist: "Worked on dozens of group project/papers as a collaborator and leader",
+        image: "./assets/skill images/teamwork.png",
+        link: "https://drive.google.com/drive/folders/1Be8i-DUzgdJsSHZrlOh3v1zpB18wF5HW?usp=sharing/"
       }
     ];
 
     const list_of_songs = [
-      // {
-      //   title: "Lass es kreisen",
-      //   artist: "AnnenMayKantereit",
-      //   image: "./assets/song images/lasseskreisen.jpg",
-      //   link: "https://open.spotify.com/track/6Pn5YAIhhT85vxBD3YoIzG?si=f05cc90c3cba4c59"
-      // },
       {
         title: "Dancing in the Moonlight",
         artist: "King Harvest",
@@ -362,6 +397,8 @@
 
     // Call function to populate experience list, no hyperlinks
     populateSongList('experience-list', list_of_experiences, 1);
+
+    populateSongList('skill-list', list_of_skills, 1);
 
     // Call function to populate song list
     populateSongList('song-list', list_of_songs, 3);
