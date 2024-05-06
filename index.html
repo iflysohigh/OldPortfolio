@@ -186,31 +186,31 @@
       {
         title: "Education",
         artist: "I graduate from Grinnell College in May 2024",
-        image: "",
+        image: "./assets/experience images/grinnellcollege.png",
         link: ""
       },
       {
         title: "Coding",
         artist: "I am proficient in HTMl, Java, Python, and more",
-        image: "",
+        image: "./assets/aboutme images/coding.png",
         link: ""
       },
       {
         title: "Swimming",
-        artist: "I competed for 15 years and hold 10+ records",
-        image: "",
+        artist: "I competed for 15 years and hold 7 records at Grinnell",
+        image: "./assets/aboutme images/swimphoto.jpeg",
         link: ""
       },
       {
         title: "Travel",
         artist: "I've traveled to many parts of Asia and Oceania",
-        image: "",
+        image: "./assets/aboutme images/hongkong.png",
         link: ""
       },
       {
         title: "Interests",
-        artist: "I like scenic drives, Euchre, and chilling with friends",
-        image: "",
+        artist: "I like scenic drives, Euchre, and traveling with friends",
+        image: "./assets/aboutme images/travel.jpg",
         link: ""
       }
     ];
@@ -270,12 +270,12 @@
     ];
 
     const list_of_songs = [
-      {
-        title: "Lass es kreisen",
-        artist: "AnnenMayKantereit",
-        image: "./assets/song images/lasseskreisen.jpg",
-        link: "https://open.spotify.com/track/6Pn5YAIhhT85vxBD3YoIzG?si=f05cc90c3cba4c59"
-      },
+      // {
+      //   title: "Lass es kreisen",
+      //   artist: "AnnenMayKantereit",
+      //   image: "./assets/song images/lasseskreisen.jpg",
+      //   link: "https://open.spotify.com/track/6Pn5YAIhhT85vxBD3YoIzG?si=f05cc90c3cba4c59"
+      // },
       {
         title: "Dancing in the Moonlight",
         artist: "King Harvest",
@@ -322,7 +322,7 @@
           <p>${song.artist}</p>
         </div>
       </a>
-      s`;
+      `;
     }
 
     // Generates HTMLs without hyperlinks
@@ -330,6 +330,8 @@
       return `
       <div class="item">
         <img src="${experience.image}" />
+        <div class="play">
+        </div>
         <h4>${experience.title}</h4>
         <p>${experience.artist}</p>
       </div>

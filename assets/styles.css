@@ -186,7 +186,7 @@ body {
   }
 
   to {
-    transform: translateX(-654%);
+    transform: translateX(-512%)
   }
 }
 
@@ -383,10 +383,4 @@ body {
   .spotify-playlists .list:hover .item {
     animation-play-state: running;
   }
-
-  /* Disable animation */
-  /* #projects .list .item,
-  #experience .list .item {
-    animation: none !important;
-  } */
 }
