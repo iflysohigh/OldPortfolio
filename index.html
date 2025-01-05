@@ -54,6 +54,13 @@
     <div class="navigation">
       <ul>
         <li>
+          <a href="#liked-songs">
+            <span class="fa fas fa-heart"></span>
+            <span>Liked Songs</span>
+          </a>
+        </li>
+        
+        <li>
           <a href="#experience">
             <span class="fa fas fa-plus-square"></span>
             <span>Experience</span>
@@ -64,13 +71,6 @@
           <a href="#skills">
             <span class="fa fas fa-list"></span>
             <span>Skills</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#liked-songs">
-            <span class="fa fas fa-heart"></span>
-            <span>Liked Songs</span>
           </a>
         </li>
       </ul>
@@ -146,6 +146,16 @@
       </div>
     </div>
 
+    <!-- Liked Songs Section -->
+    <!-- This isn't very intuitive, but going along with the theme of Spotify I thought this would be nifty -->
+    <div class="spotify-playlists" id="liked-songs">
+      <h2>Liked Songs</h2>
+      <h3>Here is a list of my favorite songs!</h3>
+      <div class="list" id="song-list">
+        <!-- Songs will be dynamically added here -->
+      </div>
+    </div>
+
     <!-- Experience Section-->
     <div class="spotify-playlists" id="experience">
       <h2>Experience</h2>
@@ -158,16 +168,6 @@
     <div class="spotify-playlists" id="skills">
       <h2>Skills</h2>
       <div class="list" id="skill-list">
-        <!-- Songs will be dynamically added here -->
-      </div>
-    </div>
-
-    <!-- Liked Songs Section -->
-    <!-- This isn't very intuitive, but going along with the theme of Spotify I thought this would be nifty -->
-    <div class="spotify-playlists" id="liked-songs">
-      <h2>Liked Songs</h2>
-      <h3>Here is a list of my favorite songs!</h3>
-      <div class="list" id="song-list">
         <!-- Songs will be dynamically added here -->
       </div>
     </div>
@@ -203,7 +203,7 @@
     const list_of_about_me = [
       {
         title: "Education",
-        artist: "I graduate from Grinnell College in May 2024",
+        artist: "I graduated from Grinnell College in Spring 2024",
         image: "./assets/experience images/grinnellcollege.png",
         link: ""
       },
@@ -215,7 +215,7 @@
       },
       {
         title: "Swimming",
-        artist: "I competed for 15 years and hold 7 records at Grinnell",
+        artist: "I competed for 15 years and hold 6 records at Grinnell",
         image: "./assets/aboutme images/swimphoto.jpeg",
         link: ""
       },
@@ -244,12 +244,6 @@
         title: "Data Ops Intern",
         artist: "Sumitomo Mitsui Banking",
         image: "./assets/experience images/smbc.jpg",
-        link: ""
-      },
-      {
-        title: "Blockchain Market Intern",
-        artist: "Lunar LLC",
-        image: "./assets/experience images/lunar.jpg",
         link: ""
       },
       {
