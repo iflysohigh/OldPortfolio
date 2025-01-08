@@ -54,16 +54,16 @@
     <div class="navigation">
       <ul>
         <li>
-          <a href="#projects">
-            <span class="fa fas fa-book"></span>
-            <span>Projects</span>
+          <a href="#experience">
+            <span class="fa fas fa-plus-square"></span>
+            <span>Experience</span>
           </a>
         </li>
 
         <li>
-          <a href="#experience">
-            <span class="fa fas fa-plus-square"></span>
-            <span>Experience</span>
+          <a href="#projects">
+            <span class="fa fas fa-book"></span>
+            <span>Projects</span>
           </a>
         </li>
 
@@ -119,12 +119,17 @@
 
     <!-- About Me Section -->
     <div class="spotify-playlists" id="about-me">
+      <h2>Hi! I'm Ethan Yuen</h2>
+
+      <br>
+      <br>
+
       <h2>About Me</h2>
       <h3>
         I am a former student-athlete turned IT professional with a unique perspective on technology and finance. A personable, creative, and enthusiastic out-of-the-box thinker. I am currently seeking opportunities to further my skills in data analytics, finance, machine learning, and strategic growth. 
         <br>
         <br>
-        On the side I lead a small team developing an AI-based platform. I oversee product development, outreach initiatives, and back-end code development. I also manage our team's talent to align current tasks with their long-term goals. Imagine combining a CEO, CSO, CFO, and Software Engineer into one!
+        On the side I lead a small team developing an AI-based platform. I oversee product development, outreach initiatives, and back-end code development. I also manage our team's talent to match their assigned tasks with career goals. Imagine combining a CEO, CSO, CFO, and Software Engineer into one!
         <br>
         <br>
         Curious? Contact me! You'll find my GitHub, LinkedIn, Resume, and Email in the upper-right. 
@@ -145,20 +150,20 @@
       </div>
     </div>
 
-    <!-- Projects Section -->
-    <div class="spotify-playlists" id="projects">
-      <h2>Projects</h2>
-      <h3>Here is a list of CS projects that I have completed in my spare time!</h3>
-      <div class="list" id="project-list">
-        <!-- Projects will be dynamically added here -->
-      </div>
-    </div>
-
     <!-- Experience Section-->
     <div class="spotify-playlists" id="experience">
       <h2>Experience</h2>
       <div class="list" id="experience-list">
         <!-- Experiences will be dynamically added here -->
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="spotify-playlists" id="projects">
+      <h2>Projects</h2>
+      <h3>Here is a list of projects that I am proud of!</h3>
+      <div class="list" id="project-list">
+        <!-- Projects will be dynamically added here -->
       </div>
     </div>
 
@@ -253,6 +258,12 @@
     ];
 
     const list_of_projects = [
+    {
+        title: "Economic Papers",
+        artist: "Read my research papers",
+        image: "./assets/skill images/researchpaper.png",
+        link: "https://drive.google.com/drive/u/1/folders/1_Eo7KENYJ1-jAlWAGBWwqLbQb3v9q4D8/"
+      },
       {
         title: "Black Scholes Model",
         artist: "Python, Flask, HTML, CSS",
@@ -285,30 +296,6 @@
         artist: "Proficient in Python, Java, C++, R Shiny, and HTML. See my GitHub!",
         image: "./assets/skill images/github.png",
         link: "https://github.com/iflysohigh/"
-      },
-      {
-        title: "Research Papers",
-        artist: "I've written several Event Study and Difference-in-Difference analysis papers",
-        image: "./assets/skill images/researchpaper.png",
-        link: "https://drive.google.com/drive/u/1/folders/1_Eo7KENYJ1-jAlWAGBWwqLbQb3v9q4D8/"
-      },
-      {
-        title: "Time Management",
-        artist: "Juggling double-major, athletics, and several leadership positions",
-        image: "./assets/skill images/timemanagement.jpg",
-        link: "https://www.linkedin.com/in/ethan-yuen/"
-      },
-      {
-        title: "Stock Analysis",
-        artist: "Coded stock technical indicators, and generated profits upwards of 1000%",
-        image: "./assets/skill images/stock.png",
-        link: "https://github.com/iflysohigh/BlackScholes/tree/main/readme/"
-      },
-      {
-        title: "Teamwork",
-        artist: "Worked on dozens of group project/papers as a collaborator and leader",
-        image: "./assets/skill images/teamwork.png",
-        link: "https://drive.google.com/drive/folders/1Be8i-DUzgdJsSHZrlOh3v1zpB18wF5HW?usp=sharing/"
       }
     ];
 
@@ -381,7 +368,7 @@
       let songHTML = '';
       for (let i = 0; i < repeatCount; i++) {
         variable_list.forEach(song => {
-          if (playlist_id === 'experience-list' || playlist_id === 'about-me-list') {
+          if (playlist_id === 'experience-list' || playlist_id === 'about-me-list' || playlist_id === 'skill-list') {
             songHTML += generateHTMLNoHyperlink(song);
           } else {
             songHTML += generateSongHTML(song);
