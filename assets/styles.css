@@ -259,7 +259,7 @@ body {
 }
 
 /* CSS for projects and experiences sections */
-#projects .spotify-playlists .list,
+/* #projects .spotify-playlists .list, */
 #experience .spotify-playlists .list,
 #skills .spotify-playlists .list {
   /* Enable horizontal scrolling */
@@ -274,7 +274,7 @@ body {
   overflow-x: scroll;
 }
 
-#projects .list .item,
+/* #projects .list .item, */
 #experience .list .item,
 #skills .list .item {
   animation: none !important;
